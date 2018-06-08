@@ -38,16 +38,23 @@ public class boyfriendventana1 {
 	@FXML
 	private void initialize(){
 		
+		System.out.println(dallas + " ini");
 	}
 	
 	@FXML
 	public void open(ActionEvent event) {
-		dallas.encender();
+		if(dallas == null) {
+			System.out.println("bad idea");
+		}
+		else {
+			dallas.encender();
+		}
 	}
 
 	private Dallas dallas;
+	
 	public void setControlador(Dallas dallas) {
 		this.dallas = dallas;
-		
+		System.out.println(this.dallas + " set");
 	}
 }
