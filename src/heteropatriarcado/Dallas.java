@@ -22,15 +22,13 @@ public class Dallas extends Application {
 	private AnchorPane rootLayout;
 	private AnchorPane rootLayout2;
 
-	public void on(String[] args) {
-		launch(args);
-	}
 	
 	@Override
 	public void start(Stage primaryStage) {
 
 		
 		try {
+			
 			this.primaryStage = primaryStage;
 			this.primaryStage.setTitle("Agender");
 
@@ -42,6 +40,8 @@ public class Dallas extends Application {
             // Show the scene containing the root layout.
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
+            
+            
             
             primaryStage.show();
             
@@ -86,7 +86,25 @@ public class Dallas extends Application {
 
 	private Modelo modelo;
 	public void setModelo(Modelo modelo) {
+		
 		this.modelo = modelo;
 		
+	}
+	public static void main(String[] args) {
+		set();
+		launch(args);
+	}
+	
+	public static void set() {
+		Dallas dallas = new Dallas();
+		Modelo modelo = new Modelo();
+		boyfriendventana1 boyfriendventana1 = new boyfriendventana1();
+		boyfriendventana2 boyfriendventana2 = new boyfriendventana2();
+		
+		dallas.setVista(boyfriendventana1, boyfriendventana2);
+		dallas.setModelo(modelo);
+		boyfriendventana1.setControlador(dallas);
+		boyfriendventana2.setControlador(dallas);
+		modelo.setVista(boyfriendventana1, boyfriendventana2);
 	}
 }

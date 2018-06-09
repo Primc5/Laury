@@ -12,7 +12,7 @@ import javafx.scene.control.TableView;
 import spaguetti.Persiona;
 
 public class boyfriendventana1 {
-
+	private Dallas dallas;
 	
 	@FXML
 	private TableView<Persiona> tablak;
@@ -37,12 +37,12 @@ public class boyfriendventana1 {
 	
 	@FXML
 	private void initialize(){
-		
 		System.out.println(dallas + " ini");
 	}
 	
 	@FXML
 	public void open(ActionEvent event) {
+		dallas.set();
 		if(dallas == null) {
 			System.out.println("bad idea");
 		}
@@ -51,10 +51,11 @@ public class boyfriendventana1 {
 		}
 	}
 
-	private Dallas dallas;
+
 	
 	public void setControlador(Dallas dallas) {
 		this.dallas = dallas;
-		System.out.println(this.dallas + " set");
+		System.out.println(dallas + " set");
 	}
+
 }
