@@ -1,5 +1,8 @@
 package spaguetti;
 
+import tavlat.boyfriendventana1;
+import tavlat.boyfriendventana2;
+
 public class Persiona {
 
 	private String nombre;
@@ -37,4 +40,12 @@ public class Persiona {
 		this.telefono = telefono;
 	}
 	
+	
+	private boyfriendventana1 boyfriendventana1;
+	private boyfriendventana2 boyfriendventana2;
+	public void setVista(boyfriendventana1 boyfriendventana1, boyfriendventana2 boyfriendventana2) {
+		this.boyfriendventana1 = boyfriendventana1;
+		this.boyfriendventana2 = boyfriendventana2;
+		
+	}
 }

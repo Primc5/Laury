@@ -15,7 +15,7 @@
         </columns>
       </TableView>
       <Button fx:id="nuebot" layoutX="116.0" layoutY="299.0" mnemonicParsing="false" onAction="#open" text="Nuevo" />
-      <Button fx:id="edibot" layoutX="215.0" layoutY="299.0" mnemonicParsing="false" text="Editar" />
+      <Button fx:id="edibot" layoutX="215.0" layoutY="299.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
       <Button fx:id="borbot" layoutX="313.0" layoutY="299.0" mnemonicParsing="false" onAction="#hakai" text="Borrar" />
    </children>
 </AnchorPane>

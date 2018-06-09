@@ -63,20 +63,15 @@ public class boyfriendventana1 {
 	@FXML
 	public void open(ActionEvent event) {
 		dallas.encender();
-		
 	}
-	
-
-	
 	public static void anadido(String t1, String t2, String t3) {
-		
-		dato.add(new Persiona(t1, t2, t3));
-				
+		dato.add(new Persiona(t1, t2, t3));		
 	}
 	
 	@FXML
 	public void hakai() {
-		if(tablak.getSelectionModel().getFocusedIndex() != 0) {
+
+		if(tablak.getSelectionModel().getFocusedIndex() > 0) {
 			dato.remove(tablak.getSelectionModel().getFocusedIndex());
 		}
 		else {
@@ -88,5 +83,23 @@ public class boyfriendventana1 {
         	alert.showAndWait();
 		}
 	}
-
+	
+	
+	@FXML
+	public void editar() {
+		if(tablak.getSelectionModel().getFocusedIndex() != 0) {
+			dallas.encender();
+			Persiona aol = tablak.getSelectionModel().getSelectedItem();
+			dato.remove(tablak.getSelectionModel().getFocusedIndex());
+			dallas.editar(aol);
+		}
+		else {
+	       	Alert alert = new Alert(AlertType.ERROR);
+	       	alert.setTitle("DEUS VUTL");
+	       	alert.setHeaderText("Error");
+	       	alert.setContentText("Ninguna columna seleccionada");
+	 	  
+	       	alert.showAndWait();
+		}
+	}
 }

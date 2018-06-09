@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import spaguetti.Modelo;
+import spaguetti.Persiona;
 import tavlat.boyfriendventana1;
 import tavlat.boyfriendventana2;
 import javafx.scene.Scene;
@@ -61,7 +62,7 @@ public class Dallas extends Application {
 	}
 	
 	private boyfriendventana1 boyfriendventana1;
-	private boyfriendventana2 boyfriendventana2;
+	private static boyfriendventana2 boyfriendventana2;
 
 	public void setVista(boyfriendventana1 boyfriendventana1, boyfriendventana2 boyfriendventana2) {
 		this.boyfriendventana1 = boyfriendventana1;
@@ -98,5 +99,12 @@ public class Dallas extends Application {
 	
 	public static void off() {
 		ventana.hide();
+	}
+	
+
+	public static void editar(Persiona aol) {
+		
+		boyfriendventana2.cargarweas(aol.getNombre(), aol.getApellido(), aol.getTelefono());
+		
 	}
 }
