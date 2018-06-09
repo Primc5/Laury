@@ -16,17 +16,11 @@ import javafx.scene.layout.GridPane;
 
 public class Dallas extends Application {
 
-	
 	private Stage primaryStage;
-	private Stage primaryStage2;
 	private AnchorPane rootLayout;
-	private AnchorPane rootLayout2;
-
 	
 	@Override
 	public void start(Stage primaryStage) {
-
-		
 		try {
 			
 			this.primaryStage = primaryStage;
@@ -41,8 +35,6 @@ public class Dallas extends Application {
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             
-            
-            
             primaryStage.show();
             
 
@@ -51,23 +43,16 @@ public class Dallas extends Application {
 		}
 	}
 
-	public void encender() {
+	private static Stage ventana = new Stage();
+	public static void encender() {
 		 try {
-		this.primaryStage2.setTitle("V2");
-
-		 // Load root layout from fxml file.
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Dallas.class.getResource("/tavlat/ventana2.fxml"));
-       
-			rootLayout2 = (AnchorPane) loader.load();
-
-
-        // Show the scene containing the root layout.
-        Scene scene = new Scene(rootLayout2);
-        primaryStage2.setScene(scene);
-        
-		
-        primaryStage2.show();
+			FXMLLoader loader = new FXMLLoader(Dallas.class.getResource("/tavlat/ventana2.fxml"));
+		    AnchorPane ventanaDos = (AnchorPane) loader.load();
+		    
+		    ventana.setTitle("Venta Dos");
+		    Scene scene = new Scene(ventanaDos);
+	        ventana.setScene(scene);
+	        ventana.show();
         
 		 }catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -106,5 +91,12 @@ public class Dallas extends Application {
 		boyfriendventana1.setControlador(dallas);
 		boyfriendventana2.setControlador(dallas);
 		modelo.setVista(boyfriendventana1, boyfriendventana2);
+		
+		boyfriendventana2.setBoyfriend1(boyfriendventana1);
+				
+	}
+	
+	public static void off() {
+		ventana.hide();
 	}
 }
