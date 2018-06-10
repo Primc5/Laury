@@ -59,16 +59,14 @@ public class boyfriendventana2 {
 		boyfriendventana1.recolocar();
 		dallas.off();
 	}
-
-	@FXML
+/*
 	public void cargarweas(String t1, String t2, String t3) {
 		System.out.println(nomtxt);
+		
+		System.out.println(t1);
 		nomtxt.setText(t1);
 		apetxt.setText(t2);
 		teltxt.setText(t3);
-	}
-	
-	
-	
+	}*/
 
 }

@@ -101,7 +101,7 @@ public class boyfriendventana1 {
 			Persiona aol = tablak.getSelectionModel().getSelectedItem();
 			almacen = tablak.getSelectionModel().getSelectedItem();
 			dato.remove(tablak.getSelectionModel().getFocusedIndex());
-			dallas.editar(aol);
+			//dallas.editar(aol);
 			punterico = 0;
 
 		}

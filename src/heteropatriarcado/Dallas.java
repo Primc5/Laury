@@ -102,9 +102,9 @@ public class Dallas extends Application {
 	}
 	
 
-	public static void editar(Persiona aol) {
+	/*public static void editar(Persiona aol) {
 		
 		boyfriendventana2.cargarweas(aol.getNombre(), aol.getApellido(), aol.getTelefono());
 		
-	}
+	}*/
 }
