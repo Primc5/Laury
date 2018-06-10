@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tavlat.boyfriendventana2">
+<AnchorPane prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.boyfriendventana2">
    <children>
       <Text layoutX="53.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
       <Text layoutX="54.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido" />

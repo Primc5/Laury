@@ -1,7 +1,7 @@
-package spaguetti;
+package Modelo;
 
-import tavlat.boyfriendventana1;
-import tavlat.boyfriendventana2;
+import Vista.boyfriendventana1;
+import Vista.boyfriendventana2;
 
 public class Persiona {
 

@@ -1,7 +1,7 @@
-package tavlat;
+package Vista;
 
 import javafx.scene.control.TextField;
-import heteropatriarcado.Dallas;
+import Controlodor.Controlador;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.Button;
@@ -9,9 +9,9 @@ import javafx.scene.control.Button;
 
 public class boyfriendventana2 {
 	
-	private Dallas dallas;
+	private Controlador dallas;
 	
-	public void setControlador(Dallas dallas) {
+	public void setControlador(Controlador dallas) {
 		this.dallas = dallas;
 		
 	}

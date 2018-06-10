@@ -1,21 +1,21 @@
-package heteropatriarcado;
+package Controlodor;
 
 import java.io.IOException;
 
+import Modelo.Modelo;
+import Modelo.Persiona;
+import Vista.boyfriendventana1;
+import Vista.boyfriendventana2;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import spaguetti.Modelo;
-import spaguetti.Persiona;
-import tavlat.boyfriendventana1;
-import tavlat.boyfriendventana2;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 
 
-public class Dallas extends Application {
+public class Controlador extends Application {
 
 	private Stage primaryStage;
 	private AnchorPane rootLayout;
@@ -29,7 +29,7 @@ public class Dallas extends Application {
 
 			 // Load root layout from fxml file.
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Dallas.class.getResource("/tavlat/ventana1.fxml"));
+            loader.setLocation(Controlador.class.getResource("/Vista/ventana1.fxml"));
             rootLayout = (AnchorPane) loader.load();
 
             // Show the scene containing the root layout.
@@ -47,7 +47,7 @@ public class Dallas extends Application {
 	private static Stage ventana = new Stage();
 	public static void encender() {
 		 try {
-			FXMLLoader loader = new FXMLLoader(Dallas.class.getResource("/tavlat/ventana2.fxml"));
+			FXMLLoader loader = new FXMLLoader(Controlador.class.getResource("/Vista/ventana2.fxml"));
 		    AnchorPane ventanaDos = (AnchorPane) loader.load();
 		    
 		    ventana.setTitle("Venta Dos");
@@ -82,7 +82,7 @@ public class Dallas extends Application {
 	}
 	
 	public static void set() {
-		Dallas dallas = new Dallas();
+		Controlador dallas = new Controlador();
 		Modelo modelo = new Modelo();
 		boyfriendventana1 boyfriendventana1 = new boyfriendventana1();
 		boyfriendventana2 boyfriendventana2 = new boyfriendventana2();

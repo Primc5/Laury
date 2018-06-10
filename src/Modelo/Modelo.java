@@ -1,8 +1,8 @@
-package spaguetti;
+package Modelo;
 
-import heteropatriarcado.Dallas;
-import tavlat.boyfriendventana1;
-import tavlat.boyfriendventana2;
+import Controlodor.Controlador;
+import Vista.boyfriendventana1;
+import Vista.boyfriendventana2;
 
 public class Modelo {
 
