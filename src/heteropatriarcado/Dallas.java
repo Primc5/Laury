@@ -92,8 +92,8 @@ public class Dallas extends Application {
 		boyfriendventana1.setControlador(dallas);
 		boyfriendventana2.setControlador(dallas);
 		modelo.setVista(boyfriendventana1, boyfriendventana2);
-		
 		boyfriendventana2.setBoyfriend1(boyfriendventana1);
+		boyfriendventana1.setBoyfriend2(boyfriendventana2);
 				
 	}
 	

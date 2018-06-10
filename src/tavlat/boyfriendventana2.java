@@ -1,10 +1,11 @@
 package tavlat;
 
+import javafx.scene.control.TextField;
 import heteropatriarcado.Dallas;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+
 
 public class boyfriendventana2 {
 	
@@ -30,7 +31,6 @@ public class boyfriendventana2 {
 	@FXML
 	private TextField teltxt;
 	
-	
 	@FXML
 	private void initialize(){
 
@@ -41,9 +41,8 @@ public class boyfriendventana2 {
 		String t1 = nomtxt.getText();
 		String t2 = apetxt.getText();
 		String t3 = teltxt.getText();
-		System.out.println("on");
+		System.out.println(nomtxt);
 		if(t1 != null && t2 != null && t3 != null) {
-
 			boyfriendventana1.anadido(t1, t2, t3);
 			dallas.off();
 			
@@ -57,19 +56,16 @@ public class boyfriendventana2 {
 	
 	@FXML
 	public void salir() {
+		boyfriendventana1.recolocar();
 		dallas.off();
 	}
 
+	@FXML
 	public void cargarweas(String t1, String t2, String t3) {
-		nomtxt = new TextField();
-		apetxt = new TextField();
-		teltxt = new TextField();
-
+		System.out.println(nomtxt);
 		nomtxt.setText(t1);
-		System.out.println(t1);
 		apetxt.setText(t2);
 		teltxt.setText(t3);
-		
 	}
 	
 	

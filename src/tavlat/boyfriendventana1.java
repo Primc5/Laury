@@ -63,16 +63,25 @@ public class boyfriendventana1 {
 	@FXML
 	public void open(ActionEvent event) {
 		dallas.encender();
+		punterico = 0;
 	}
 	public static void anadido(String t1, String t2, String t3) {
 		dato.add(new Persiona(t1, t2, t3));		
+
+	}
+	private int punterico;
+	
+	@FXML
+	public void clikeao() {
+		punterico = 1;
 	}
 	
 	@FXML
 	public void hakai() {
-
-		if(tablak.getSelectionModel().getFocusedIndex() > 0) {
+		if(punterico == 1) {
+			System.out.println("lo intenta");
 			dato.remove(tablak.getSelectionModel().getFocusedIndex());
+			punterico = 0;
 		}
 		else {
         	Alert alert = new Alert(AlertType.ERROR);
@@ -84,14 +93,17 @@ public class boyfriendventana1 {
 		}
 	}
 	
-	
+	private static Persiona almacen;
 	@FXML
 	public void editar() {
-		if(tablak.getSelectionModel().getFocusedIndex() != 0) {
+		if(punterico == 1) {
 			dallas.encender();
 			Persiona aol = tablak.getSelectionModel().getSelectedItem();
+			almacen = tablak.getSelectionModel().getSelectedItem();
 			dato.remove(tablak.getSelectionModel().getFocusedIndex());
 			dallas.editar(aol);
+			punterico = 0;
+
 		}
 		else {
 	       	Alert alert = new Alert(AlertType.ERROR);
@@ -101,5 +113,16 @@ public class boyfriendventana1 {
 	 	  
 	       	alert.showAndWait();
 		}
+	}
+
+	public static void recolocar() {
+		dato.add(almacen);
+		almacen = null;
+	}
+
+	private boyfriendventana2 boyfriendventana2;
+	public void setBoyfriend2(boyfriendventana2 boyfriendventana2) {
+		this.boyfriendventana2 = boyfriendventana2;
+		
 	}
 }
